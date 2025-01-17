@@ -27,6 +27,10 @@
     background: rgba(255, 144, 14, 0.1);
 }
 
+.text-primary{
+    color: #FF900E;
+}
+
 .btn-primary{
     border-radius: 8px;
     background: rgb(255, 144, 14);
@@ -35,16 +39,23 @@
     font-size: 1.25rem;
     font-weight: 600;
     border: none;
-    
 }
 
+main > section{
+    margin: 8rem 0px 8rem 0px;
+}
+    
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
 
-/* ===============================================Common css ended */
+/* ===============================================Common css ends here */
 
-/* ===============================================Body Styles Starts*/
+/* ===============================================Body Styles Starts=================================*/
 
-/* header styles */
 
+/*----------------------------------- Header styles ---------------------------------*/
 
 /* navbar styles */
 .navbar{
@@ -54,9 +65,6 @@
 .navbar , .banner{
     max-width: 1440px;
     margin: 0 auto;
-}
-.nav-links{
-
 }
 
 .nav-items{
@@ -82,6 +90,7 @@
     margin: 0 auto;
     text-align: center;
     margin-bottom: 50px;
+
 }
 
 .banner-title{
@@ -91,11 +100,61 @@
 
 .banner-img{
     width: 100%;
+    margin-bottom: 2rem;
 }
 
-/* Responsive Media Quarry */
+/*---------------------------- Main styles ---------------------------------*/
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.teams{
+    align-items: center;
+}
+.team-image-container{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 24px;
+}
+
+.our-features{
+    margin-left: 8.125rem;
+    max-width: 33.125rem;
+}
+
+#quick-list{
+    font-weight: 500;
+
+}
+/*--------------------------------------------------- Responsive Media Quarry starts */
 @media screen and (max-width: 576px) {
-    .navbar , .nav-links{
+    .navbar , .nav-links, .teams{
         flex-direction: column;
     }
+
+    .team-image-container{
+        grid-template-columns: repeat(1 , 1fr);
+    }
+
+    .our-features{
+        margin-left: 1.25rem;
+        /* max-width: 33.125rem; */
+    }
 }
+
+/* medium size devices */
+
+@media screen and (min-width: 577px) and (max-width:992px){
+    .teams{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .our-features{
+        margin-left: 2rem;
+    }
+}
+
+/*--------------------------------------------------- Responsive Media Quarry ends */
+
